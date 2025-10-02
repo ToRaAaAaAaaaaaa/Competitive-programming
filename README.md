@@ -13,5 +13,4 @@
 
 ## 🔗 関連リンク
 
-- **AtCoder**: [Your_AtCoder_ID](https://atcoder.jp/users/Your_AtCoder_ID)
-- **Twitter**: [@Your_Twitter_Handle](https://twitter.com/Your_Twitter_Handle) (もしあれば)
+- **AtCoder**: [AtCoder_Prof](https://atcoder.jp/users/agitora)
