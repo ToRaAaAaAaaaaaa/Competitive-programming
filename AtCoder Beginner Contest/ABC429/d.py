@@ -1,19 +1,15 @@
 N,M,C=map(int, input().split())
 A=list(map(int, input().split()))
-people=[0 for _ in range(M)]
-answer=[0 for _ in range(M)]
-for i in range(N):
-    people[A[i]]+=1
-    answer[A[i]]+=1
-t=1
-cnt=0
-while t:
-    t=0
-    cnt+=1
-    for i in range(M):
-        if answer[i]<C:answer[i]+=people[(i+cnt)%M]
-        if answer[i]<C:t=1
-ANSWER=0
-for ans in answer:
-    ANSWER+=ans
-print(ANSWER)
+setA=sorted(set(A))
+people={setA[i]:0 for i in range(len(setA))}
+for a in A:people[a]+=1
+ANS=[]
+for b in people:
+ ans=0;B=b
+ while ans<C:
+  ans+=people[setA[B%len(setA)]];ANS.append(ans)
+answer=0
+for c in range(len(people)):
+ if c==0:answer+=(M+setA[0]-setA[-1])*ANS[c]
+ else:answer+=abs(setA[c]-setA[c-1])*ANS[c]
+print(answer)
